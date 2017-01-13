@@ -13,7 +13,7 @@
 docker run -d -p 80:80 openfrontier/docker-ldap-ssp
 ```
 
-  2. Open your browser to http://<docker host url>
+  2. Open your browser to `http://localhost`
 
 ## Available Configuration Parameters
 
@@ -40,7 +40,7 @@ Below is the complete list of parameters that can be set using environment varia
   
 ## Shell Access
 
-For debugging and maintenance purposes you may want access the containers shell. If you are using docker version `1.3.0` or higher you can access a running containers shell using `docker exec` command.
+For debugging and maintenance purposes you may want access the containers shell.
 
 ```bash
 docker exec -it openfrontier/docker-ldap-ssp bash
