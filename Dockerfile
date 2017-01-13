@@ -20,9 +20,9 @@ RUN curl http://tools.ltb-project.org/attachments/download/889/${SSP_PACKAGE} \
 
 # ldap server info
 ENV LDAP_URL "ldap://ldap:389"
-ENV LDAP_DN "cn=admin,dc=ldap,dc=example,dc=com"
-ENV LDAP_PWD "changeme"
-ENV LDAP_BS "dc=ldap,dc=example,dc=com"
+ENV LDAP_BINDDN "cn=admin,dc=example,dc=com"
+ENV LDAP_BINDPW "changeme"
+ENV LDAP_BASE "dc=example,dc=com"
 
 # ltb configuration file info
 ENV PWD_MIN_LENGTH 0

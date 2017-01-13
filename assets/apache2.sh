@@ -4,9 +4,9 @@ set -e
 CONFIG_INC=/var/www/html/conf/config.inc.php
 # ldap server info
 sed -i "s#{LDAP_URL}#${LDAP_URL}#g" ${CONFIG_INC}
-sed -i "s/{LDAP_DN}/${LDAP_DN}/g" ${CONFIG_INC}
-sed -i "s/{LDAP_PWD}/${LDAP_PWD}/g" ${CONFIG_INC}
-sed -i "s/{LDAP_BS}/${LDAP_BS}/g" ${CONFIG_INC}
+sed -i "s/{LDAP_BINDDN}/${LDAP_BINDDN}/g" ${CONFIG_INC}
+sed -i "s/{LDAP_BINDPW}/${LDAP_BINDPW}/g" ${CONFIG_INC}
+sed -i "s/{LDAP_BASE}/${LDAP_BASE}/g" ${CONFIG_INC}
 # ltb configuration file info
 sed -i "s/{PWD_MIN_LENGTH}/${PWD_MIN_LENGTH}/g" ${CONFIG_INC}
 sed -i "s/{PWD_MAX_LENGTH}/${PWD_MAX_LENGTH}/g" ${CONFIG_INC}

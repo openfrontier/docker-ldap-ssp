@@ -22,9 +22,9 @@ docker run -d -p 80:80 openfrontier/docker-ldap-ssp
 Below is the complete list of parameters that can be set using environment variables.
 
 - **LDAP_URL**: The service url for ldap. Defaults to `ldap://ldap:389`
-- **LDAP_DN**: The administrator of the ldap service. Defaults to `cn=admin,dc=ldap,dc=example,dc=com`
-- **LDAP_PWD**: The administrator password for the ldap service. Defaults to `changeme`
-- **LDAP_BS**: The base dn for the ldap service. Defaults to `dc=ldap,dc=example,dc=com`
+- **LDAP_BINDDN**: The administrator of the ldap service. Defaults to `cn=admin,dc=example,dc=com`
+- **LDAP_BINDPW**: The administrator password for the ldap service. Defaults to `changeme`
+- **LDAP_BASE**: The base dn for the ldap service. Defaults to `dc=example,dc=com`
 - **PWD_MIN_LENGTH**: The user sets the minimum length of the password. Defaults to `0`
 - **PWD_MAX_LENGTH**: The user sets the maximum length of the password. Defaults to `0`
 - **PWD_MIN_LOWER**: The user-defined password contains a minimum of lower characters. Defaults to `0`

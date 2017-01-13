@@ -25,9 +25,9 @@
 # LDAP
 $ldap_url = "{LDAP_URL}";
 #$ldap_starttls = false;
-$ldap_binddn = "{LDAP_DN}";
-$ldap_bindpw = "{LDAP_PWD}";
-$ldap_base = "{LDAP_BS}";
+$ldap_binddn = "{LDAP_BINDDN}";
+$ldap_bindpw = "{LDAP_BINDPW}";
+$ldap_base = "{LDAP_BASE}";
 $ldap_login_attribute = "uid";
 $ldap_fullname_attribute = "cn";
 $ldap_filter = "(&(objectClass=inetOrgPerson)($ldap_login_attribute={login}))";
