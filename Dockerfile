@@ -19,10 +19,10 @@ RUN curl http://tools.ltb-project.org/attachments/download/889/${SSP_PACKAGE} \
     && rmdir /var/www/html/ltb-project-self-service-password-1.0
 
 # ldap server info
-ENV LDAP_LTB_URL "ldap://ldap:389"
-ENV LDAP_LTB_DN "cn=admin,dc=ldap,dc=example,dc=com"
-ENV LDAP_LTB_PWD "changeme"
-ENV LDAP_LTB_BS "dc=ldap,dc=example,dc=com"
+ENV LDAP_URL "ldap://ldap:389"
+ENV LDAP_DN "cn=admin,dc=ldap,dc=example,dc=com"
+ENV LDAP_PWD "changeme"
+ENV LDAP_BS "dc=ldap,dc=example,dc=com"
 
 # ltb configuration file info
 ENV PWD_MIN_LENGTH 0

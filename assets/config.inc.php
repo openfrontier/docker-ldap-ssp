@@ -23,14 +23,14 @@
 # Configuration
 #==============================================================================
 # LDAP
-$ldap_url = "{LDAP_LTB_URL}";
+$ldap_url = "{LDAP_URL}";
 #$ldap_starttls = false;
-$ldap_binddn = "{LDAP_LTB_DN}";
-$ldap_bindpw = "{LDAP_LTB_PWD}";
-$ldap_base = "{LDAP_LTB_BS}";
+$ldap_binddn = "{LDAP_DN}";
+$ldap_bindpw = "{LDAP_PWD}";
+$ldap_base = "{LDAP_BS}";
 $ldap_login_attribute = "uid";
 $ldap_fullname_attribute = "cn";
-$ldap_filter = "(&(objectClass=person)($ldap_login_attribute={login}))";
+$ldap_filter = "(&(objectClass=inetOrgPerson)($ldap_login_attribute={login}))";
 
 # Active Directory mode
 # true: use unicodePwd as password field
@@ -64,7 +64,7 @@ $shadow_options['update_shadowLastChange'] = false;
 # clear (the default)
 # auto (will check the hash of current password)
 # This option is not used with ad_mode = true
-$hash = "MD5";
+$hash = "SSHA";
 
 # Prefix to use for salt with CRYPT
 #$hash_options['crypt_salt_prefix'] = "$6$";
