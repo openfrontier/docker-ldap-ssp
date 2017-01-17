@@ -13,10 +13,8 @@ RUN apt-get update \
 
 # Install ssp
 RUN curl http://tools.ltb-project.org/attachments/download/889/${SSP_PACKAGE} \
-    -o ssp.tar.gz && tar xf ssp.tar.gz -C /var/www/html \
-    && rm -f ssp.tar.gz /var/www/html/index.html \
-    && mv /var/www/html/ltb-project-self-service-password-1.0/* /var/www/html \
-    && rmdir /var/www/html/ltb-project-self-service-password-1.0
+    -o ssp.tar.gz && tar xf ssp.tar.gz -C /var/www/html && rm -f ssp.tar.gz \
+    && mv /var/www/html/ltb-project-self-service-password-1.0 /var/www/html/ssp
 
 # ldap server info
 ENV LDAP_URL "ldap://ldap:389"
@@ -39,7 +37,7 @@ ENV SMTP_USER smtpuser
 ENV SMTP_PASS smtppass
 
 # This is where configuration goes
-ADD assets/config.inc.php /var/www/html/conf/config.inc.php
+ADD assets/config.inc.php /var/www/html/ssp/conf/config.inc.php
 
 ADD assets/apache2.sh /etc/service/apache2/run
 

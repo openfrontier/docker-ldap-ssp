@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-CONFIG_INC=/var/www/html/conf/config.inc.php
+CONFIG_INC=/var/www/html/ssp/conf/config.inc.php
 # ldap server info
 sed -i "s#{LDAP_URL}#${LDAP_URL}#g" ${CONFIG_INC}
 sed -i "s/{LDAP_BINDDN}/${LDAP_BINDDN}/g" ${CONFIG_INC}

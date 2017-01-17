@@ -13,7 +13,7 @@
 docker run -d -p 80:80 openfrontier/docker-ldap-ssp
 ```
 
-  2. Open your browser to `http://localhost`
+  2. Open your browser to `http://localhost/ssp`
 
 ## Available Configuration Parameters
 
