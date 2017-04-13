@@ -12,7 +12,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Install ssp
-RUN curl http://tools.ltb-project.org/attachments/download/889/${SSP_PACKAGE} \
+RUN curl -L https://ltb-project.org/archives/${SSP_PACKAGE} \
     -o ssp.tar.gz && tar xf ssp.tar.gz -C /var/www/html && rm -f ssp.tar.gz \
     && mv /var/www/html/ltb-project-self-service-password-1.0 /var/www/html/ssp
 
