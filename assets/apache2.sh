@@ -21,6 +21,11 @@ if [ "${NOTIFY_ON_CHANGE}"x = "true"x ]; then
 else
     sed -i "s/{NOTIFY_ON_CHANGE}/false/g" ${CONFIG_INC}
 fi
+if [ "${SMTP_AUTH}"x = "false"x ]; then
+    sed -i "s/{SMTP_AUTH}/${SMTP_AUTH}/g" ${CONFIG_INC}
+else
+    sed -i "s/{SMTP_AUTH}/true/g" ${CONFIG_INC}
+fi
 sed -i "s/{SMTP_HOST}/${SMTP_HOST}/g" ${CONFIG_INC}
 sed -i "s/{SMTP_USER}/${SMTP_USER}/g" ${CONFIG_INC}
 sed -i "s/{SMTP_PASS}/${SMTP_PASS}/g" ${CONFIG_INC}
