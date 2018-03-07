@@ -37,6 +37,9 @@ ENV SMTP_HOST localhost
 ENV SMTP_USER smtpuser
 ENV SMTP_PASS smtppass
 
+# mail url setup
+ENV MAIL_URL http
+
 # This is where configuration goes
 ADD assets/config.inc.php /var/www/html/ssp/conf/config.inc.php
 

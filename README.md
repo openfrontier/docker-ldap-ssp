@@ -37,6 +37,7 @@ Below is the complete list of parameters that can be set using environment varia
 - **SMTP_HOST**: SMTP server hostname. Defaults to `localhost`
 - **SMTP_USER**: SMTP server username. Defaults to `smtpuser`
 - **SMTP_PASS**: SMTP server password of username. Defaults to `smtppass`
+- **MAIL_URL**: Setup mail link agreement. Defaults to `http`
   
 ## Shell Access
 
