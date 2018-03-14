@@ -2,8 +2,6 @@
 set -e
 
 CONFIG_INC=/var/www/html/ssp/conf/config.inc.php
-APACHE2_CONF=/etc/apache2/apache2.conf
-
 # ldap server info
 sed -i "s#{LDAP_URL}#${LDAP_URL}#g" ${CONFIG_INC}
 sed -i "s/{LDAP_BINDDN}/${LDAP_BINDDN}/g" ${CONFIG_INC}
@@ -31,15 +29,5 @@ fi
 sed -i "s/{SMTP_HOST}/${SMTP_HOST}/g" ${CONFIG_INC}
 sed -i "s/{SMTP_USER}/${SMTP_USER}/g" ${CONFIG_INC}
 sed -i "s/{SMTP_PASS}/${SMTP_PASS}/g" ${CONFIG_INC}
-# mail url setup
-if [ "${MAIL_URL}"x = "https"x ]; then
-    MAIL_LABEL=`grep "mod_env.c" ${APACHE2_CONF}|wc -l`
-    if [ ${MAIL_LABEL} -eq 0 ]; then
-        echo "<IfModule mod_env.c>" >> ${APACHE2_CONF}
-        echo "    SetEnv HTTPS on" >> ${APACHE2_CONF}
-        echo "</IfModule>" >> ${APACHE2_CONF}
-    fi
-fi
-
 # start apache
-exec /usr/local/bin/apache2-foreground
+exec /usr/sbin/apache2ctl -D FOREGROUND
