@@ -1,6 +1,6 @@
-FROM php:5.6-apache
+FROM php:7.1-apache
 
-MAINTAINER mengzhaopeng <qiuranke@gmail.com>
+MAINTAINER zsx <thinkernel@gmail.com>
 
 ENV SSP_PACKAGE ltb-project-self-service-password-1.0.tar.gz
 
