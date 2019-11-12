@@ -2,7 +2,8 @@ FROM php:7.1-apache
 
 MAINTAINER zsx <thinkernel@gmail.com>
 
-ENV SSP_PACKAGE ltb-project-self-service-password-1.0.tar.gz
+ENV SSP_VERSION 1.2
+ENV SSP_PACKAGE ltb-project-self-service-password
 
 # Install the software that ssp environment requires
 RUN apt-get update \
@@ -12,9 +13,9 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Install ssp
-RUN curl -L https://ltb-project.org/archives/${SSP_PACKAGE} \
+RUN curl -L https://ltb-project.org/archives/${SSP_PACKAGE}-${SSP_VERSION}.tar.gz \
     -o ssp.tar.gz && tar xf ssp.tar.gz -C /var/www/html && rm -f ssp.tar.gz \
-    && mv /var/www/html/ltb-project-self-service-password-1.0 /var/www/html/ssp
+    && mv /var/www/html/${SSP_PACKAGE}-${SSP_VERSION} /var/www/html/ssp
 
 # ldap server info
 ENV LDAP_URL "ldap://ldap:389"
