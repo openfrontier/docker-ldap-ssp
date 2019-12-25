@@ -13,8 +13,10 @@ RUN apt-get update \
 
 # Install ssp
 RUN curl -L https://ltb-project.org/archives/${SSP_PACKAGE} \
-    -o ssp.tar.gz && tar xf ssp.tar.gz -C /var/www/html && rm -f ssp.tar.gz \
+    -o ssp.tar.gz && tar xpf ssp.tar.gz -C /var/www/html && rm -f ssp.tar.gz \
     && mv /var/www/html/ltb-project-self-service-password-1.0 /var/www/html/ssp
+
+RUN chown -R root:root /var/www/html/ssp
 
 # ldap server info
 ENV LDAP_URL "ldap://ldap:389"
