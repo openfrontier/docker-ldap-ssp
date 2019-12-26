@@ -41,6 +41,8 @@ ENV SMTP_PASS smtppass
 
 # This is where configuration goes
 ADD assets/config.inc.php /var/www/html/ssp/conf/config.inc.php
+#RUN chown -R www-data:www-data /var/www/html/ssp
+RUN chown www-data:www-data /var/www/html/ssp/conf/config.inc.php
 
 ADD assets/apache2.sh /etc/service/apache2/run
 
