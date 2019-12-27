@@ -206,7 +206,7 @@ $background_image = "images/unsplash-space.jpeg";
 $debug = false;
 
 # Encryption, decryption keyphrase
-$keyphrase = "secret";
+$keyphrase = "2fa4231a009e148288114ea5dafc149f";
 
 # Where to log password resets - Make sure apache has write permission
 # By default, they are logged in Apache log
