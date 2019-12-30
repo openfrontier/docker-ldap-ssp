@@ -39,6 +39,7 @@ ENV SMTP_USER smtpuser
 ENV SMTP_PASS smtppass
 
 # This is where configuration goes
+RUN mv /var/www/html/ssp/conf/config.inc.php /var/www/html/ssp/conf/config.inc.php.orig
 ADD assets/config.inc.php /var/www/html/ssp/conf/config.inc.php
 
 ADD assets/apache2.sh /etc/service/apache2/run
