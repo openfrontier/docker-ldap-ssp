@@ -10,7 +10,7 @@
   1. Launch the ssp container
 
 ```bash
-docker run --name ssp -d -p 80:80 openfrontier/docker-ldap-ssp
+docker run --name ssp -d -p 80:80 openfrontier/ldap-ssp
 docker cp ssp:/var/www/html/ssp/conf/config.inc.php ./config.inc.local.php
 vi ./config.inc.local.php
 docker cp ./config.inc.local.php ssp:/var/www/html/ssp/conf/config.inc.local.php
