@@ -10,9 +10,10 @@
   1. Launch the ssp container
 
 ```bash
-vi assets/config.inc.php
 docker run --name ssp -d -p 80:80 openfrontier/docker-ldap-ssp
-docker cp assets/config.inc.php ssp:/var/www/html/ssp/conf/config.inc.php
+docker cp ssp:/var/www/html/ssp/conf/config.inc.php ./config.inc.local.php
+vi ./config.inc.local.php
+docker cp ./config.inc.local.php ssp:/var/www/html/ssp/conf/config.inc.local.php
 ```
 
   2. Open your browser to `http://localhost/ssp`

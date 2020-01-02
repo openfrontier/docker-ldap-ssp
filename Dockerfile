@@ -19,7 +19,4 @@ RUN curl -L https://ltb-project.org/archives/${SSP_PACKAGE}-${SSP_VERSION}.tar.g
 
 RUN chown -R www-data:www-data /var/www/html/ssp
 
-# This is where configuration goes
-RUN cp /var/www/html/ssp/conf/config.inc.php /var/www/html/ssp/conf/config.inc.php.orig
-
 EXPOSE 80
