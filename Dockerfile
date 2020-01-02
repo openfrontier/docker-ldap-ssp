@@ -2,7 +2,7 @@ FROM php:5.6-apache
 
 MAINTAINER zsx <thinkernel@gmail.com>
 
-ENV SSP_VERSION 1.2
+ENV SSP_VERSION 1.3
 ENV SSP_PACKAGE ltb-project-self-service-password
 
 # Install the software that ssp environment requires
