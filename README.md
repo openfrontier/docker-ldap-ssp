@@ -1,10 +1,10 @@
-# docker-ldap-ssp
+# ldap-ssp
 
  This docker is for users to modify ldap password.
  This image is based on the [Self Service Password](https://github.com/ltb-project/self-service-password) system.
 
 ## Version
- Current Version: Self Service Password 1.2
+ Current Version: Self Service Password 1.3
 
 ## Quick Start
   1. Launch the ssp container
